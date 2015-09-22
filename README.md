@@ -33,6 +33,17 @@ var pixMap = captcha.getPixelMapFromBuffer(buf);
 console.log(captcha.getCaptcha(pixMap));
 ```
 
+### Android Usage
+
+Add  ```CaptchaParser.java``` to your project. You will have to download image and save it as a ```File``` object. 
+
+```java
+File image_file = new File("captcha.bmp");
+CaptchaParser cp = new CaptchaParser();
+cp.setIMAGE_FILE(image_file);
+Log.i("Captcha retrieved",cp.getCaptcha());
+```
+
 ## Bugs and feature requests
 
 Have a bug or a feature request? If your problem or idea is not addressed yet, [please open a new issue](https://github.com/karthikb351/CaptchaParser/issues).
@@ -42,3 +53,4 @@ Have a bug or a feature request? If your problem or idea is not addressed yet, [
 Contribute away. Let's see them PRs.
 
 Code released under [the MIT license](LICENSE).
+
